@@ -1,81 +1,99 @@
 /* global $ */
 
-
-  
-
-
-
  $("button").click(function() {
-
+         var totalScore = 0;
       var name = $("#name").val();
         var techPlacement = "TBD";
         var imgSrc = "https://media.giphy.com/media/22zgHX8aop488/giphy.gif";
         var q1Result = $("#question1").val();
         var q2Result = $("#question2").val();
         var q3Result = $("#question3").val();
-        var totalScore;
+      
+      
+        q1(q1Result);
+        q2(q2Result);
+        q3(q3Result);
+
+
+ 
 
 
 
-  
 
 
-function q1 (){
+
+
+
+
+
+
+ 
+    function q1 (x){
+ 
+ console.log(x);   
     
+if (x === "Often"){
     
-if (q1Result == "Often"){
+totalScore = totalScore + 15;    
+
+}
+
+else if (x === "not often"){
     
-totalScore + 15;    
+totalScore = totalScore + 5;    
     
 }
 
-else if (q1Result == "not often"){
-    
-totalScore + 5;    
-    
-}
+else if (x === "never"){
 
-else{
-
-totalScore + 1;    
+totalScore = totalScore + 1;    
     
 }    
     
 }
 
-function q2 (){
+function q2 (y){
     
+     console.log(y);   
+if (y === "Yes"){
     
-if (q2Result == "Yes"){
-    
-totalScore + 15;    
+totalScore = totalScore + 15;    
     
 }
 
-else {
+else if (y === "No") {
     
-totalScore + 5;    
+totalScore = totalScore + 5;    
     
 }
   
 }
 
-function q3 (){
+function q3 (z){
     
+ console.log(z);   
     
-if (q3Result == "Work"){
+if (z === "Work"){
     
-totalScore + 20;    
-    
-}
-
-else{
-    
-totalScore + 1;    
+totalScore = totalScore + 20;    
     
 }
 
+else if (z === "Home"){
+    
+totalScore = totalScore + 1;    
     
 }
+
+
+
+
+    
+}
+
+
+console.log(totalScore);
 
 });
+
+
