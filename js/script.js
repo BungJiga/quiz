@@ -5,6 +5,7 @@
       var name = $("#name").val();
         var techPlacement = "TBD";
         var imgSrc = "https://media.giphy.com/media/22zgHX8aop488/giphy.gif";
+        var name = $("#name").val();
         var q1Result = $("#question1").val();
         var q2Result = $("#question2").val();
         var q3Result = $("#question3").val();
@@ -93,6 +94,30 @@ totalScore = totalScore + 1;
 
 
 console.log(totalScore);
+
+var result;
+
+if (totalScore >= 25 && totalScore >= 10){
+  result =  "Alienware Computer";
+    
+    
+}
+
+else if (totalScore <= 25 && totalScore >= 10){
+    
+ result = "Razer Computer";    
+    
+}
+
+else if (totalScore <=25 && totalScore <=10)  {
+    
+ result = "Dell Inspiron Computer";
+    
+    
+}
+
+$(".button").hide();
+$(".result").text("Congratualtions, " + " " + name + " " + "you should buy a " + result + "!");
 
 });
 
